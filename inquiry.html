@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Inquiry Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 custom-inquiry-bg">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success d-flex align-items-center" href="index.html">
+                <img src="images/official_seal.png" alt="Seal" width="75" height="75" class="me-2">
+                Zamboanga del Sur
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="festivals.html">Festivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="inquiry.html">Inquiry</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 750px;">
+        <div class="carding p-4 p-md-5 shadow border-0 rounded-3 bg-dark">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-success">Plan Your Trip</h2>
+                <p class="text-muted">Fill out this secure form to request detailed information regarding specific destinations.</p>
+            </div>
+
+            <form id="inquiryForm" novalidate>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="John Doe">
+                    <div class="invalid-feedback">Full name is required.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="johndoe@example.com">
+                    <div class="invalid-feedback">Please provide a valid email address structure.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Contact Number</label>
+                    <input type="text" id="contactNum" class="form-control" placeholder="09123456789">
+                    <div class="invalid-feedback">Contact number must contain numbers only.</div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Selected Destination</label>
+                        <select id="destination" class="form-select">
+                            <option value="">-- Choose destination --</option>
+                            <option value="Pulacan Falls">Pulacan Falls(Waterfall)</option>
+                            <option value="Mount Timolan">Mount Timolan (Mountain)</option>
+                            <option value="Dao-Dao Islands">Dao-Dao Islands (Island)</option>
+                            <option value="Balumbonan Cave">Balumbonan Cave (Cave)</option>
+                            <option value="Lake Wood">Lake Wood (Beach)</option>
+                            <option value="Kan-anan sa Balsa">Kan-anan sa Balsa (Food Destination)</option>
+                            <option value="Serene Mangrove Forests">Serene Mangrove Forests (Adventure)</option>
+                            <option value="Provincial Capitol Complex">Provincial Capitol Complex (Historical Site)</option>
+                            <option value="Manga Falls">Manga Falls (Falls)</option>
+                            <option value="Mount Palpalan">Mount Palpalan (Mountain)</option>
+                            <option value="Panikian Island">Panikian Island (Island)</option>
+                            <option value="Sominot Cave">Sominot Cave (Cave)</option>
+                            <option value="Baganian Beach">Baganian Beach (Beach)</option>
+                            <option value="Pagadian Satti Hub">Pagadian Satti Hub (Food Destination)</option>
+                            <option value="Lake Dasay">Lake Dasay (Lake)</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a destination.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Travel Date</label>
+                        <input type="date" id="travelDate" class="form-control">
+                        <div class="invalid-feedback">Travel date must not be empty.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Number of Visitors</label>
+                    <input type="number" id="visitors" class="form-control" min="1" placeholder="1">
+                    <div class="invalid-feedback">Number of visitors must be at least 1.</div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Message / Special Requests</label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your custom accommodation requests..."></textarea>
+                    <div class="invalid-feedback">Message field is required.</div>
+                </div>
+
+                <div id="formStatusBox" class="mb-3 d-none text-center p-3 rounded fw-bold"></div>
+                <button type="submit" class="btn btn-success w-100 py-2.5 fs-5 shadow-sm bg-success">Submit Inquiry</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-secondary text-center py-4 mt-auto">
+        <p class="mb-0">&copy; 2026 Province of Zamboanga del Sur Tourism Office. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

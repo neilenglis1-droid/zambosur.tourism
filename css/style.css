@@ -1,0 +1,133 @@
+/* Hero banner background layout */
+/* Hero banner background layout */
+.hero-section {
+    /* Use ../ to go back one folder to find the images folder */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/pulacan.jpg') no-repeat center center/cover;
+    
+    width: 100%;
+    min-height: 80vh; /* Use min-height instead of fixed height */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    text-align: center;
+    
+    /* Helps prevent text from hitting the very edge of the screen on mobile */
+    padding: 20px; 
+}
+
+/* Navigation item background hover color */
+.navbar-nav .nav-link:hover {
+    background-color: #ffc107 !important;
+    border-radius: 5px; /* Adds nicely rounded corners to the highlight */
+    color: black;
+}
+
+/* Image behavior inside destination and element grids */
+.card-img-top {
+    height: 220px; 
+    object-fit: cover;
+}
+
+/* Festival detail page custom sizing overrides */
+.festival-img {
+    height: 280px; 
+    object-fit: cover;
+}
+
+/* Food card image aspect sizing controls */
+.food-img {
+    height: 180px; 
+    object-fit: cover;
+}
+
+/* Interactive photo gallery scaling animations */
+.gallery-img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-img:hover {
+    transform: scale(1.04);
+}
+
+/* Lightbox configuration override boundaries */
+.lightbox-frame {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.card{
+    background-color:#f2ea66;
+}
+
+#destinationsGrid .card-body {
+    background-color: #ffffff !important;
+}   
+
+/* "View Details" Button Base Style */
+#destinationsGrid .btn {
+    background-color: #212529 !important;
+    color: #ffffff !important; /* Keeps text white on the dark background */
+    border-color: #212529 !important;
+    transition: all 0.3s ease; /* Adds a smooth fade effect */
+}
+
+/* "View Details" Button Hover Style */
+#destinationsGrid .btn:hover {
+    background-color: #ffc107 !important;
+    color: #000000 !important; /* Changes text to black so it's readable on yellow */
+    border-color: #ffc107 !important;
+}
+
+/* Change Modal Header background to dark gray and text to yellow */
+#detailsModal .modal-header {
+    background-color: #212529 !important;
+    color: #ffc107 !important;
+    border-bottom: none; /* Optional: removes the small line under the header */
+}
+
+/* Ensure the title text specifically gets the yellow color */
+#detailsModal .modal-header .modal-title,
+#detailsModal .modal-header h5 {
+    color: #ffc107 !important;
+}
+
+/* Make the 'X' close button white so it's visible on the dark background */
+#detailsModal .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Add smooth transition to all cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Elevate the card and increase shadow on hover */
+.card:hover {
+    transform: translateY(-8px); /* Moves the card up by 8 pixels */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important; /* Creates a larger, softer shadow beneath it */
+}
+
+/* Standardize festival image heights */
+.festival-img {
+    height: 350px; /* You can increase or decrease this number to change the height */
+    object-fit: cover; /* Ensures the image fills the space without stretching */
+    width: 100%;
+}
+
+/* Standardize gallery image heights and prevent gray gaps */
+.gallery-img {
+    height: 275px; /* You can adjust this number up or down to make the squares taller or shorter */
+    object-fit: cover; /* Forces the image to fill the box cleanly */
+    width: 100%;
+}
+/* Custom Background for Inquiry Page */
+.custom-inquiry-bg {
+    background: linear-gradient(135deg, #d4ebd0 100%, #f8f9fa 100%);
+}
