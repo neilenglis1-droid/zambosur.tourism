@@ -1,5 +1,4 @@
 /* Hero banner background layout */
-/* Hero banner background layout */
 .hero-section {
     /* Use ../ to go back one folder to find the images folder */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -34,8 +33,9 @@
 
 /* Festival detail page custom sizing overrides */
 .festival-img {
-    height: 280px; 
+    height: 350px; 
     object-fit: cover;
+    width: 100%;
 }
 
 /* Food card image aspect sizing controls */
@@ -48,8 +48,9 @@
 .gallery-img {
     cursor: pointer;
     transition: transform 0.2s ease;
-    height: 200px;
+    height: 275px;
     object-fit: cover;
+    width: 100%;
 }
 
 .gallery-img:hover {
@@ -62,8 +63,9 @@
     object-fit: cover;
 }
 
-.card{
+.card {
     background-color:#f2ea66;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 #destinationsGrid .card-body {
@@ -73,15 +75,15 @@
 /* "View Details" Button Base Style */
 #destinationsGrid .btn {
     background-color: #212529 !important;
-    color: #ffffff !important; /* Keeps text white on the dark background */
+    color: #ffffff !important;
     border-color: #212529 !important;
-    transition: all 0.3s ease; /* Adds a smooth fade effect */
+    transition: all 0.3s ease; 
 }
 
 /* "View Details" Button Hover Style */
 #destinationsGrid .btn:hover {
     background-color: #ffc107 !important;
-    color: #000000 !important; /* Changes text to black so it's readable on yellow */
+    color: #000000 !important;
     border-color: #ffc107 !important;
 }
 
@@ -89,7 +91,7 @@
 #detailsModal .modal-header {
     background-color: #212529 !important;
     color: #ffc107 !important;
-    border-bottom: none; /* Optional: removes the small line under the header */
+    border-bottom: none; 
 }
 
 /* Ensure the title text specifically gets the yellow color */
@@ -103,31 +105,72 @@
     filter: invert(1) grayscale(100%) brightness(200%);
 }
 
-/* Add smooth transition to all cards */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
 /* Elevate the card and increase shadow on hover */
 .card:hover {
-    transform: translateY(-8px); /* Moves the card up by 8 pixels */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important; /* Creates a larger, softer shadow beneath it */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Standardize festival image heights */
-.festival-img {
-    height: 350px; /* You can increase or decrease this number to change the height */
-    object-fit: cover; /* Ensures the image fills the space without stretching */
-    width: 100%;
-}
-
-/* Standardize gallery image heights and prevent gray gaps */
-.gallery-img {
-    height: 275px; /* You can adjust this number up or down to make the squares taller or shorter */
-    object-fit: cover; /* Forces the image to fill the box cleanly */
-    width: 100%;
-}
 /* Custom Background for Inquiry Page */
 .custom-inquiry-bg {
     background: linear-gradient(135deg, #d4ebd0 100%, #f8f9fa 100%);
+}
+
+/* ==========================================================================
+   Mobile Responsiveness (Media Queries)
+   ========================================================================== */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 15px;
+    }
+
+    /* Scale down large typography for mobile */
+    .hero-section .display-2 {
+        font-size: 2.5rem;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    .display-5 {
+        font-size: 1.75rem;
+    }
+
+    /* Reduce fixed image heights */
+    .card-img-top,
+    .festival-img {
+        height: 220px;
+    }
+    .food-img {
+        height: 160px;
+    }
+    .gallery-img {
+        height: 180px;
+    }
+
+    /* Adjust inquiry form padding */
+    .carding {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 576px) {
+    .gallery-img {
+        height: 120px; /* Keep gallery squares proportional on small grids */
+    }
+    .festival-img {
+        height: 180px;
+    }
+    
+    /* Center align footer sections strictly on small screens */
+    footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    footer .d-flex {
+        justify-content: center;
+    }
 }
